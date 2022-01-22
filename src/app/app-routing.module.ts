@@ -4,16 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'mapas',
-    loadChildren: () => import('./mapas/mapas.module').then(m => m.MapasModule)
+    loadChildren: () =>
+      import('./mapas/mapas.module').then((m) => m.MapasModule),
   },
   {
     path: '**',
-    redirectTo: 'mapas'
-  }
+    redirectTo: 'mapas',
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
