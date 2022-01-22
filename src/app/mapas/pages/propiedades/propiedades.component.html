@@ -5,10 +5,10 @@
   </div>
 </div>
 
-<div class="row container">
+<div class="container">
   <div class="col-10 offset-2">
     <div class="row">
-      <div class="col-4 mb-2" *ngFor="let propiedad of propiedades">
+      <div class=" col-md-12 col-lg-4 mb-2" *ngFor="let propiedad of propiedades">
         <div class="card">
             <app-mini-mapa [lngLat]="propiedad.lngLat" class="card-img-top"></app-mini-mapa>
           <img class="card-img-top" alt="" />
